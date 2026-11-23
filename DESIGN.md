@@ -38,14 +38,14 @@ visual direction — read and preserve them on every subsequent build; do not
 re-derive a new direction. The first UI pass must fill these fields in as
 part of that build, not leave them as an empty template.
 
-- Product mode: `operate` | `read` | `persuade` | `experience`
-- Audience and cadence:
-- Visual world (name + the feeling it creates):
-- Palette family + neutral undertone:
-- Type treatment:
-- Composition:
-- Shape language:
-- Anti-references (defaults this app must not drift toward):
+- Product mode: `persuade`
+- Audience and cadence: Local shoppers and gift buyers; occasional visits, scan-and-click.
+- Visual world (name + the feeling it creates): Clean modern stationer, professional and trustworthy, aligned with the connected Bootstrap design system.
+- Palette family + neutral undertone: Bootstrap primary blue (#0d6efd) accent; cool gray neutrals.
+- Type treatment: Inter, semibold tight-tracked headings, muted body copy.
+- Composition: Sticky nav, split hero, 3-up category cards, product grid, perks row, newsletter band.
+- Shape language: Bootstrap radii (~6px controls, 12px cards), soft shadows, hairline borders.
+- Anti-references (defaults this app must not drift toward): gray SaaS placeholder, twee handmade-craft kitsch, heavy gradients.
 
 ## Agent-Native is structural, not visual
 
