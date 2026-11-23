@@ -47,12 +47,12 @@ const categories = [
 ];
 
 const products = [
-  { name: "Linen Hardcover Notebook", cat: "Paper Goods", price: "$18", tone: "bg-blue-50", icon: IconNotebook },
-  { name: "Brass Fountain Pen", cat: "Small Gifts", price: "$42", tone: "bg-amber-50", icon: IconPencil },
-  { name: "Digital Gift Card", cat: "Gift Cards", price: "from $10", tone: "bg-emerald-50", icon: IconCreditCard },
-  { name: "Weekly Desk Planner", cat: "Paper Goods", price: "$14", tone: "bg-rose-50", icon: IconNotebook },
-  { name: "Letterpress Card Set", cat: "Paper Goods", price: "$16", tone: "bg-violet-50", icon: IconMail },
-  { name: "Gift Box: Write & Unwind", cat: "Small Gifts", price: "$36", tone: "bg-sky-50", icon: IconGift },
+  { img: "https://images.pexels.com/photos/4464481/pexels-photo-4464481.jpeg?auto=compress&cs=tinysrgb&w=640", name: "Linen Hardcover Notebook", cat: "Paper Goods", price: "$18", tone: "bg-blue-50", icon: IconNotebook },
+  { img: "https://images.pexels.com/photos/356390/pexels-photo-356390.jpeg?auto=compress&cs=tinysrgb&w=640", name: "Brass Fountain Pen", cat: "Small Gifts", price: "$42", tone: "bg-amber-50", icon: IconPencil },
+  { img: "https://images.pexels.com/photos/31884819/pexels-photo-31884819.jpeg?auto=compress&cs=tinysrgb&w=640", name: "Digital Gift Card", cat: "Gift Cards", price: "from $10", tone: "bg-emerald-50", icon: IconCreditCard },
+  { img: "https://images.pexels.com/photos/5706225/pexels-photo-5706225.jpeg?auto=compress&cs=tinysrgb&w=640", name: "Weekly Desk Planner", cat: "Paper Goods", price: "$14", tone: "bg-rose-50", icon: IconNotebook },
+  { img: "https://images.pexels.com/photos/11650091/pexels-photo-11650091.jpeg?auto=compress&cs=tinysrgb&w=640", name: "Letterpress Card Set", cat: "Paper Goods", price: "$16", tone: "bg-violet-50", icon: IconMail },
+  { img: "https://images.pexels.com/photos/35216608/pexels-photo-35216608.jpeg?auto=compress&cs=tinysrgb&w=640", name: "Gift Box: Write & Unwind", cat: "Small Gifts", price: "$36", tone: "bg-sky-50", icon: IconGift },
 ];
 
 const perks = [
@@ -109,17 +109,17 @@ export default function HomeRoute() {
               </div>
             </div>
             <div className="relative mx-auto grid w-full max-w-md grid-cols-2 gap-4">
-              <div className="flex aspect-[4/5] flex-col justify-between rounded-xl bg-primary p-5 text-primary-foreground shadow-lg">
-                <IconNotebook size={36} />
-                <div>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-xl shadow-lg">
+                <img src="https://images.pexels.com/photos/4464481/pexels-photo-4464481.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Linen hardcover notebook" className="h-full w-full object-cover" />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-white">
                   <p className="text-sm opacity-80">Bestseller</p>
                   <p className="font-semibold">Linen Notebook</p>
                 </div>
               </div>
-              <div className="mt-10 flex aspect-[4/5] flex-col justify-between rounded-xl border bg-card p-5 shadow-lg">
-                <IconGift size={36} className="text-primary" />
-                <div>
-                  <p className="text-sm text-muted-foreground">Gift</p>
+              <div className="relative mt-10 aspect-[4/5] overflow-hidden rounded-xl shadow-lg">
+                <img src="https://images.pexels.com/photos/35216608/pexels-photo-35216608.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Write and Unwind gift box" className="h-full w-full object-cover" />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-white">
+                  <p className="text-sm opacity-80">Gift</p>
                   <p className="font-semibold">Write &amp; Unwind Box</p>
                 </div>
               </div>
@@ -157,8 +157,8 @@ export default function HomeRoute() {
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {products.map((p) => (
                 <div key={p.name} className="overflow-hidden rounded-xl border bg-card">
-                  <div className={`flex h-44 items-center justify-center ${p.tone} dark:bg-muted`}>
-                    <p.icon size={48} className="text-primary/70" stroke={1.4} />
+                  <div className="h-44 overflow-hidden bg-muted">
+                    <img src={p.img} alt={p.name} loading="lazy" className="h-full w-full object-cover" />
                   </div>
                   <div className="flex items-center justify-between p-4">
                     <div>
